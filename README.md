@@ -1,131 +1,95 @@
-# Interact-with-file
-# 🚀 HRIS AI Assistant
+# HRIS AI Assistant 🤖
 
-A powerful AI-driven HR Information System that revolutionizes CV processing and ID card information extraction.
+A powerful AI-powered HR assistant that revolutionizes CV processing and candidate evaluation through an intuitive web interface and robust API backend.
 
-## ✨ Key Features
+## 🚀 Key Features
 
-### 📄 Advanced CV Processing
-- **Extracts** critical information from multiple CV formats:
-  - PDF
-  - DOCX
-  - TXT
-  - XLSX
-  - PPTX
-- **Analyzes** and **structures** CV data into organized JSON format
-- **Identifies** key components:
+- **Intelligent CV Processing**: Seamlessly extracts and analyzes information from multiple file formats:
+  - PDF (✓)
+  - DOCX (✓)
+  - XLSX (✓)
+  - PPTX (✓)
+  - TXT (✓)
+
+- **Advanced AI Analysis**: Leverages OpenAI's GPT-3.5 to:
+  - Extract structured candidate information
+  - Evaluate candidate strengths and weaknesses
+  - Assess language proficiency
+  - Provide intelligent responses to HR queries
+
+- **Dual Interface**:
+  - Interactive Streamlit Web UI for human-friendly interactions
+  - Robust FastAPI backend for programmatic access
+
+## 💡 Key Capabilities
+
+- **Smart Information Extraction**: Automatically identifies and structures:
   - Personal Information
-  - Skills
-  - Experience
-  - Education
+  - Skills & Competencies
+  - Work Experience
+  - Educational Background
   - Certifications
-  - Languages
-  - Strengths & Weaknesses
-- **Powers** intelligent conversations about CVs using GPT-3.5 Turbo
-- **Enables** HR professionals to make data-driven hiring decisions
+  - Language Proficiency
+  - Strengths & Areas for Improvement
 
-### 🪪 Smart ID Card Processing
-- **Automates** information extraction from ID cards
-- **Detects** and **extracts**:
-  - ID Number
-  - Full Name
-  - Date of Birth
-  - Gender
-  - Nationality
-  - Place of Origin
-  - Residence Address
-  - Expiration Date
-- **Provides** instant visual verification
-- **Generates** structured data output
+- **Interactive Chat**: Enables natural language conversations about candidate profiles
+- **JSON Export**: Generates structured, machine-readable outputs
+- **Multi-file Processing**: Handles batch CV processing efficiently
 
-### 💡 Intelligent Features
-- **Real-time** chat interface with AI assistant
-- **Multi-document** processing capability
-- **Streamlined** JSON export functionality
-- **Interactive** user interface with Streamlit
-- **Robust** error handling and validation
-- **Secure** API key management
+## 🛠️ Technical Stack
 
-## 🛠️ Technology Stack
-
-### Backend
-- FastAPI
-- Uvicorn
-- SQLAlchemy
-- Python 3.10+
-
-### Frontend
-- Streamlit
-- Pillow
-- PDFPlumber
-- Python-docx
-- OpenAI GPT-3.5
-
-### AI/ML
-- OpenAI API
-- Computer Vision
-- Natural Language Processing
+- **Frontend**: Streamlit
+- **Backend**: FastAPI
+- **AI Integration**: OpenAI GPT-3.5
+- **File Processing**:
+  - pdfplumber
+  - python-docx
+  - pandas
+  - python-pptx
 
 ## 🚀 Getting Started
 
-### Prerequisites
+1. **Install Dependencies**:
 ```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-### Running the Application
+2. **Set Environment Variables**:
 ```bash
-# Start the FastAPI backend
-python run.py
-
-# Access the application
-Frontend: http://localhost:8070
-API: http://localhost:8080
+export OPENAI_API_KEY="your-api-key"
 ```
 
-## 🔑 Configuration
-
-1. Obtain an OpenAI API key
-2. Configure environment variables:
+3. **Launch the Application**:
 ```bash
-PORT=8080
-UPLOAD_FOLDER=uploads
+python main.py
 ```
+
+The application will start:
+- FastAPI server on port 8080
+- Streamlit interface on port 8050
+
+## 🔌 API Endpoints
+
+- `GET /`: Health check endpoint
+- `POST /upload-file/`: Upload and process CV files
+- `GET /get-extract-text/`: Retrieve extracted text content
+- `GET /get-json/`: Generate structured JSON from CV
+- `POST /ask-question/`: Query the AI about specific CVs
+- `DELETE /clean/`: Clear temporary files
 
 ## 🎯 Use Cases
 
 - **HR Departments**: Streamline candidate screening process
-- **Recruitment Agencies**: Process multiple applications efficiently
-- **Identity Verification**: Quick and accurate ID card processing
-- **Document Management**: Structured data extraction from various formats
+- **Recruitment Agencies**: Process multiple CVs efficiently
+- **Career Counselors**: Analyze candidate profiles comprehensively
+- **Job Seekers**: Get AI-powered feedback on their CVs
 
 ## 🔒 Security Features
 
-- Secure API key handling
-- Temporary file management
-- Protected file uploads
-- Sanitized data processing
-
-## 🌟 Benefits
-
-- **Time Savings**: Reduces manual document processing by up to 90%
-- **Accuracy**: Minimizes human error in data extraction
-- **Efficiency**: Processes multiple documents simultaneously
-- **Intelligence**: Provides AI-powered insights and analysis
-- **Flexibility**: Supports multiple document formats
-- **Scalability**: Handles growing document processing needs
-
-## 📈 Future Enhancements
-
-- [ ] Multi-language support
-- [ ] Advanced document analysis
-- [ ] Custom AI model training
-- [ ] Batch processing capabilities
-- [ ] Enhanced security features
-- [ ] API integration options
+- API key authentication
+- Secure file handling
+- Temporary file cleanup
+- Protected endpoints
 
 ## 🤝 Contributing
 
@@ -137,10 +101,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🙏 Acknowledgments
 
-- OpenAI for GPT-3.5 API
-- Streamlit for the amazing UI framework
-- FastAPI for the robust backend
+- OpenAI for providing the GPT-3.5 API
+- The Streamlit team for their excellent web framework
+- FastAPI team for the robust API framework
 
 ---
 
-⭐ Star us on GitHub if this project helps you!
+Built with ❤️ for HR professionals and recruiters worldwide
